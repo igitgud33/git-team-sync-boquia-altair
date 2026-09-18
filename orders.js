@@ -16,7 +16,8 @@ function cancelOrder(order) {
 }
 
 function calculateLoyaltyPoints(order) {
-  points = order.total / 10;
+  const basePts = order.total / 10;
+  let points = basePts;
 
   if(order.total > 100) {
     points *= 1.5;
